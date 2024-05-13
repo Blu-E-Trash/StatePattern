@@ -21,6 +21,10 @@ public class Action : MonoBehaviour
         {
             Debug.Log("오른쪽으로 움직이는 중");
         }
+        else if (Input.GetButtonUp("Horizontal"))
+        {
+            Debug.Log("멈춤");
+        }
     }
     void Jump()
     {
@@ -29,4 +33,5 @@ public class Action : MonoBehaviour
             Debug.Log("점프!");
         }
     }
+     
 }
