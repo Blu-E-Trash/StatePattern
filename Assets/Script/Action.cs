@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class Action : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void FixedUpdate()
     {
-        
+        Move();
+        Jump();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Move()
     {
-        
+        if (Input.GetAxisRaw("Horizontal") < 0)
+        {
+            Debug.Log("왼쪽으로 움직이는 중");
+        }
+
+        else if (Input.GetAxisRaw("Horizontal") > 0)
+        {
+            Debug.Log("오른쪽으로 움직이는 중");
+        }
+    }
+    void Jump()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            Debug.Log("점프!");
+        }
     }
 }
